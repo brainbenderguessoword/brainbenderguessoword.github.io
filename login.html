@@ -2,9 +2,8 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Brain Bender - Sign Up</title>
+    <title>Brain Bender - Log In</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src='https://www.google.com/recaptcha/api.js'></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body  style="flex-direction: column;">
@@ -24,19 +23,11 @@
       <small style="color: #fc1c45">Guessoword's</small>
       <div class="game-title">Brain Bender</div>
       <div class="game-instructions">A measure of your thinking speed</div>
-      <form action="https://brainbenderdemo.pythonanywhere.com/signup" method="POST">
-      <input name="email" placeholder="Email Address" style="width: 50%; display: block" type="email" required>
+      <form action="https://brainbender.pythonanywhere.com/login" method="POST">
       <input name="username" placeholder="Username" style="width: 50%; display: block" type="text" required>
       <input name="password" placeholder="Password" style="width: 50%; display: block" type="password" required><br>
-      <div style="padding: 2px; display: flex">
-      <input type="checkbox" id="checkbox-input" class="checkbox-input" required>
-      <label class="checkbox-label" for="checkbox-input">I agree to the <a href="/terms">Terms of Service</a> and <a href="/privacy">Privacy Policy</a>.</span>
-      </div>
-      <div class="g-recaptcha" data-sitekey="6LeaO3YkAAAAACzmMIenXxwKujuGmuSpUi-qSDS3"></div><br>
 
-
-      <button style="display: block" class="game-button" type="submit">Sign Up</button>
-      <p style="display: block; text-align: left">Signing up will save your progress to an account. Like all Guessoword products, Brain Bender is completely free.</p>
+      <button style="display: block" class="game-button" type="submit">Log In</button>
       </form>
       <br><br><small>&copy 2023 Guessoword.com</small>
     </div>
