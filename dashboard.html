@@ -40,11 +40,32 @@
 <script>
 var total;
 
-fetch('https://brainbender.pythonanywhere.com/getusername')
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById("username1").innerHTML = data;
-  });
+// Retrieve the value of the "username" cookie
+var cookieValue = getCookie("username");
+
+// Store the value in local storage
+localStorage.setItem("username", cookieValue);
+
+// Function to retrieve the value of a cookie
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i <ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+document.getElementById("username1").innerHTML = cookieValue;
+
+
 
 let startTime = new Date();
 
