@@ -40,7 +40,9 @@
 <script>
 var total;
 
-fetch('https://brainbender.pythonanywhere.com/getusername')
+fetch('https://brainbender.pythonanywhere.com/getusername', {
+  credentials: 'include'
+})
   .then(response => response.text())
   .then(data => {
     document.getElementById("username1").innerHTML = data;
